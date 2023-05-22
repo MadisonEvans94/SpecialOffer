@@ -49,7 +49,10 @@ button {
 	border-radius: 1em;
 	cursor: pointer;
 	border: none;
+	color: black;
+	transition: 0.1s;
 }
+
 .background {
 	background: url("Asset.png");
 	background-size: cover;
@@ -99,7 +102,9 @@ button {
 .grid > .full-width {
 	grid-column: 1 / span 2;
 }
-
+.confirmation-message {
+	color: black;
+}
 @media screen and (max-width: 600px) {
 	.grid {
 		grid-template-columns: 1fr;
