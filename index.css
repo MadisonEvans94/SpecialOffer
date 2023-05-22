@@ -1,7 +1,8 @@
 :root {
-	--primary: black;
-	--secondary: #3d3d3d;
-	--success: #129a14;
+	--primary: black; /* Primary color */
+	--secondary: #3d3d3d; /* Secondary color */
+	--success: #129a14; /* Success color */
+	--accent: #d55d27; /* Accent color */
 }
 
 *,
@@ -12,7 +13,7 @@
 	padding: 0;
 }
 
-/* overriding autofill defaults */
+/* Overriding autofill defaults */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -36,7 +37,7 @@ html {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--primary);
+	background-color: var(--primary); /* Set background color */
 	font-family: "SF Pro Display", fallback, sans-serif;
 }
 
@@ -44,20 +45,20 @@ input {
 	font-size: 1em;
 	flex: 1;
 	padding: 1em;
-	background-color: var(--primary);
-	border: 2px solid var(--secondary);
+	background-color: var(--primary); /* Set input background color */
+	border: 2px solid var(--secondary); /* Set input border */
 	outline: none;
 	box-shadow: none;
 	border-radius: 1em;
-	color: white;
+	color: white; /* Set input text color */
 }
 
 input::placeholder {
-	color: white;
+	color: white; /* Set input placeholder color */
 }
 
 input:focus {
-	border: 2px solid var(--success);
+	border: 2px solid var(--success); /* Set input border color on focus */
 	box-shadow: none;
 }
 
@@ -69,8 +70,13 @@ input:focus {
 	border-radius: 1em;
 	cursor: pointer;
 	border: none;
-	color: black;
+	color: black; /* Set button text color */
 	transition: 0.1s;
+}
+
+.button-primary:hover {
+	background-color: #d55d27; /* Set button background color on hover */
+	color: white; /* Set button text color on hover */
 }
 
 .background {
@@ -87,8 +93,7 @@ input:focus {
 
 .layout {
 	text-align: start;
-
-	color: white;
+	color: white; /* Set text color */
 	width: 43.5em;
 	margin-inline: auto;
 	margin-block: auto;
@@ -97,7 +102,7 @@ input:focus {
 .title {
 	font-style: normal;
 	font-weight: 700;
-	font-size: 3em;
+	font-size: 3em; /* Set font size */
 	letter-spacing: -0.02em;
 	text-align: left;
 	margin-bottom: 36px;
@@ -107,7 +112,7 @@ input:focus {
 	font-style: medium;
 	font-style: normal;
 	font-weight: 500;
-	font-size: 24px;
+	font-size: 24px; /* Set font size */
 	line-height: 100%;
 	margin-bottom: 48px;
 }
@@ -119,7 +124,7 @@ input:focus {
 
 .form-container {
 	width: 100%;
-	max-width: 696px;
+	max-width: 696px; /* Set maximum form container width */
 	margin: auto;
 }
 
@@ -127,8 +132,8 @@ input:focus {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, auto);
-	column-gap: 10px;
-	row-gap: 12px;
+	column-gap: 10px; /* Set column gap */
+	row-gap: 12px; /* Set row gap */
 	margin-bottom: 8px;
 }
 
@@ -137,31 +142,31 @@ input:focus {
 }
 
 .confirmation-message {
-	color: black;
+	color: black; /* Set confirmation message text color */
 }
 
 @media screen and (max-width: 1200px) {
 	.layout {
 		width: 100%;
-		max-width: 900px;
+		max-width: 900px; /* Adjust layout maximum width for screens up to 1200px */
 	}
 }
 
 @media screen and (max-width: 992px) {
 	.layout {
-		max-width: 728px;
+		max-width: 728px; /* Adjust layout maximum width for screens up to 992px */
 	}
 }
 
 @media screen and (max-width: 768px) {
 	.layout {
-		max-width: 540px;
+		max-width: 540px; /* Adjust layout maximum width for screens up to 768px */
 	}
 }
 
 @media screen and (max-width: 576px) {
 	.layout {
-		max-width: 100%;
+		max-width: 100%; /* Adjust layout maximum width for screens up to 576px */
 		padding: 1em;
 	}
 }
