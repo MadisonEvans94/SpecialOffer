@@ -5,7 +5,13 @@
 	margin: 0;
 	padding: 0;
 }
-
+@font-face {
+	font-family: "SFPro", Arial, sans-serif;
+	src: url("your-font-file.woff2") format("woff2"),
+		url("your-font-file.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
 body,
 html {
 	height: 100%;
@@ -14,56 +20,8 @@ html {
 	justify-content: center;
 	align-items: center;
 	background-color: black;
-}
-
-@font-face {
-	font-family: "SFPro";
-	src: url("your-font-file.woff2") format("woff2"),
-		url("your-font-file.woff") format("woff");
-	font-weight: normal;
-	font-style: normal;
-}
-
-body {
 	font-family: "SFPro", fallback, sans-serif;
 }
-
-.container {
-	text-align: center;
-	padding: 2em;
-	color: white;
-	border-radius: 8px;
-	border: 1px solid white;
-	width: 40em;
-	margin-inline: auto;
-	margin-block: auto;
-	text-align: start;
-}
-.page-container {
-	background: url("Asset.png");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: center;
-}
-
-.form-container {
-	width: 100%;
-	max-width: 600px;
-	margin: auto;
-}
-
-.grid {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(2, auto);
-	column-gap: 1em;
-}
-
 input {
 	flex: 1;
 	margin-block: 0.5em;
@@ -90,6 +48,52 @@ button {
 	padding: 1em;
 	border-radius: 1em;
 	cursor: pointer;
+	border: none;
+}
+.background {
+	background: url("Asset.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+.layout {
+	text-align: center;
+	padding: 2em;
+	color: white;
+	border-radius: 8px;
+	border: 1px solid white;
+	width: 43.5em;
+	margin-inline: auto;
+	margin-block: auto;
+	text-align: start;
+}
+.title {
+	max-width: 553px;
+}
+.description {
+	max-width: 522px;
+	margin-block: 1em;
+}
+.description-small {
+	font-size: smaller;
+	margin-bottom: 2em;
+}
+
+.form-container {
+	width: 100%;
+	max-width: 600px;
+	margin: auto;
+}
+.grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, auto);
+	column-gap: 1em;
 }
 
 .grid > .full-width {
