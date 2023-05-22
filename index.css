@@ -21,7 +21,7 @@ input:-webkit-autofill:active {
 }
 
 @font-face {
-	font-family: "SFPro", Arial, sans-serif;
+	font-family: "SF Pro Display", Arial, sans-serif;
 	src: url("your-font-file.woff2") format("woff2"),
 		url("your-font-file.woff") format("woff");
 	font-weight: normal;
@@ -36,10 +36,11 @@ html {
 	justify-content: center;
 	align-items: center;
 	background-color: var(--primary);
-	font-family: "SFPro", fallback, sans-serif;
+	font-family: "SF Pro Display", fallback, sans-serif;
 }
 
 input {
+	font-size: 1em;
 	flex: 1;
 	margin-block: 0.5em;
 	padding: 1em;
@@ -93,22 +94,31 @@ button {
 }
 
 .title {
-	max-width: 553px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	letter-spacing: -0.02em;
+	text-align: left;
 }
 
 .description {
 	max-width: 522px;
 	margin-block: 1em;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1.5em;
+	line-height: 100%;
 }
 
 .description-small {
-	font-size: smaller;
+	font-size: 0.875em;
 	margin-bottom: 2em;
 }
 
 .form-container {
 	width: 100%;
-	max-width: 600px;
+	max-width: 43.5em;
 	margin: auto;
 }
 
