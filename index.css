@@ -1,6 +1,7 @@
 :root {
 	--primary: black;
 	--secondary: #3d3d3d;
+	--success: #129a14;
 }
 
 *,
@@ -42,10 +43,9 @@ html {
 input {
 	font-size: 1em;
 	flex: 1;
-	margin-block: 0.5em;
 	padding: 1em;
 	background-color: var(--primary);
-	border: 1px solid var(--secondary);
+	border: 2px solid var(--secondary);
 	outline: none;
 	box-shadow: none;
 	border-radius: 1em;
@@ -57,11 +57,11 @@ input::placeholder {
 }
 
 input:focus {
-	border: 1px solid white;
+	border: 2px solid var(--success);
 	box-shadow: none;
 }
 
-button {
+.button-primary {
 	width: 343px;
 	height: 56px;
 	font-size: 1em;
@@ -100,19 +100,21 @@ button {
 	font-size: 3em;
 	letter-spacing: -0.02em;
 	text-align: left;
+	margin-bottom: 36px;
 }
 
 .description {
-	margin-block: 1em;
+	/* margin-block: 1em; */
 	font-style: normal;
 	font-weight: 500;
 	font-size: 1.5em;
 	line-height: 100%;
+	margin-bottom: 48px;
 }
 
 .description-small {
 	font-size: 0.875em;
-	margin-bottom: 3em;
+	margin-bottom: 48px;
 }
 
 .form-container {
@@ -121,14 +123,16 @@ button {
 	margin: auto;
 }
 
-.grid {
+.input-grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, auto);
-	column-gap: 1em;
+	column-gap: 10px;
+	row-gap: 12px;
+	margin-bottom: 8px;
 }
 
-.grid > .full-width {
+.input-grid > .full-width {
 	grid-column: 1 / span 2;
 }
 
