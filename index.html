@@ -17,12 +17,18 @@
 					</p>
 					<p>Reserve your handle, share this page and follow us.</p>
 					<div class="input-row grid">
-						<input type="text" placeholder="Name" id="name" />
-						<input type="email" placeholder="Email" id="email" />
+						<input
+							type="text"
+							placeholder="Name"
+							id="name"
+							required
+							pattern="[A-Za-z0-9]*" />
+						<input type="email" placeholder="Email" id="email" required />
 						<input
 							type="text"
 							placeholder="Handle"
 							id="handle"
+							required
 							class="full-width" />
 					</div>
 					<button type="submit" id="submit-btn">Submit</button>
