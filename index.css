@@ -1,3 +1,8 @@
+:root {
+	--primary: black;
+	--secondary: #3d3d3d;
+}
+
 *,
 *::before,
 *::after {
@@ -5,6 +10,15 @@
 	margin: 0;
 	padding: 0;
 }
+/* overriding auto fill defaults */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-box-shadow: 0 0 0 30px var(--primary) inset !important;
+	-webkit-text-fill-color: white !important;
+}
+
 @font-face {
 	font-family: "SFPro", Arial, sans-serif;
 	src: url("your-font-file.woff2") format("woff2"),
@@ -12,6 +26,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
 body,
 html {
 	height: 100%;
@@ -19,15 +34,16 @@ html {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: black;
+	background-color: var(--primary);
 	font-family: "SFPro", fallback, sans-serif;
 }
+
 input {
 	flex: 1;
 	margin-block: 0.5em;
 	padding: 1em;
-	background-color: black;
-	border: 1px solid gray;
+	background-color: var(--primary);
+	border: 1px solid var(--secondary);
 	outline: none;
 	box-shadow: none;
 	border-radius: 15px;
@@ -39,10 +55,10 @@ input::placeholder {
 }
 
 input:focus {
-	border: none;
-	outline: none;
+	border: 1px solid white;
 	box-shadow: none;
 }
+
 button {
 	width: 343px;
 	padding: 1em;
@@ -64,24 +80,26 @@ button {
 	display: flex;
 	align-items: center;
 }
+
 .layout {
-	text-align: center;
+	text-align: start;
 	padding: 2em;
 	color: white;
 	border-radius: 8px;
-	border: 1px solid white;
 	width: 43.5em;
 	margin-inline: auto;
 	margin-block: auto;
-	text-align: start;
 }
+
 .title {
 	max-width: 553px;
 }
+
 .description {
 	max-width: 522px;
 	margin-block: 1em;
 }
+
 .description-small {
 	font-size: smaller;
 	margin-bottom: 2em;
@@ -92,6 +110,7 @@ button {
 	max-width: 600px;
 	margin: auto;
 }
+
 .grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -102,9 +121,11 @@ button {
 .grid > .full-width {
 	grid-column: 1 / span 2;
 }
+
 .confirmation-message {
 	color: black;
 }
+
 @media screen and (max-width: 600px) {
 	.grid {
 		grid-template-columns: 1fr;
