@@ -48,7 +48,7 @@ input {
 	border: 1px solid var(--secondary);
 	outline: none;
 	box-shadow: none;
-	border-radius: 15px;
+	border-radius: 1em;
 	color: white;
 }
 
@@ -63,6 +63,8 @@ input:focus {
 
 button {
 	width: 343px;
+	height: 56px;
+	font-size: 1em;
 	padding: 1em;
 	border-radius: 1em;
 	cursor: pointer;
@@ -87,7 +89,6 @@ button {
 	text-align: start;
 	padding: 2em;
 	color: white;
-	border-radius: 8px;
 	width: 43.5em;
 	margin-inline: auto;
 	margin-block: auto;
@@ -96,14 +97,12 @@ button {
 .title {
 	font-style: normal;
 	font-weight: 700;
-	font-size: 1.5em;
-	line-height: 1.5em;
+	font-size: 3em;
 	letter-spacing: -0.02em;
 	text-align: left;
 }
 
 .description {
-	max-width: 522px;
 	margin-block: 1em;
 	font-style: normal;
 	font-weight: 500;
@@ -113,7 +112,7 @@ button {
 
 .description-small {
 	font-size: 0.875em;
-	margin-bottom: 2em;
+	margin-bottom: 3em;
 }
 
 .form-container {
