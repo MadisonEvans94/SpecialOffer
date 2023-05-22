@@ -16,6 +16,18 @@ html {
 	background-color: black;
 }
 
+@font-face {
+	font-family: "SFPro";
+	src: url("your-font-file.woff2") format("woff2"),
+		url("your-font-file.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: "SFPro", fallback, sans-serif;
+}
+
 .container {
 	text-align: center;
 	padding: 2em;
@@ -77,6 +89,7 @@ button {
 	width: 343px;
 	padding: 1em;
 	border-radius: 1em;
+	cursor: pointer;
 }
 
 .grid > .full-width {

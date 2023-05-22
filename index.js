@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			event.preventDefault();
 			pageContainer.style.backgroundImage = "none";
 			pageContainer.style.backgroundColor = "#90ee90";
+			form.reset();
 		}
 	});
 });
