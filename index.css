@@ -44,6 +44,7 @@ html {
 
 input {
 	font-size: 1em;
+	width: 100%;
 	flex: 1;
 	padding: 1em;
 	background-color: var(--primary); /* Set input background color */
@@ -64,7 +65,8 @@ input:focus {
 }
 
 .button-primary {
-	width: 343px;
+	max-width: 343px;
+	width: 100%;
 	height: 56px;
 	font-size: 1em;
 	padding: 1em;
@@ -86,8 +88,8 @@ input:focus {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
-	width: 100%;
 	height: 100%;
+	width: 100%;
 	display: flex;
 	align-items: center;
 }
@@ -95,7 +97,8 @@ input:focus {
 .layout {
 	text-align: start;
 	color: white; /* Set text color */
-	width: 43.5em;
+	width: 100%;
+	max-width: 43.5em;
 	margin-inline: auto;
 	margin-block: auto;
 }
@@ -113,7 +116,7 @@ input:focus {
 	font-style: medium;
 	font-style: normal;
 	font-weight: 500;
-	font-size: 24px; /* Set font size */
+	font-size: 24px;
 	line-height: 100%;
 	margin-bottom: 48px;
 }
@@ -125,16 +128,17 @@ input:focus {
 
 .form-container {
 	width: 100%;
-	max-width: 696px; /* Set maximum form container width */
+	max-width: 696px;
 	margin: auto;
 }
 
 .input-grid {
 	display: grid;
+	width: 100%;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, auto);
-	column-gap: 10px; /* Set column gap */
-	row-gap: 12px; /* Set row gap */
+	column-gap: 10px;
+	row-gap: 12px;
 	margin-bottom: 8px;
 }
 
@@ -146,28 +150,51 @@ input:focus {
 	color: white; /* Set confirmation message text color */
 }
 
+/* extra large screens */
 @media screen and (max-width: 1200px) {
 	.layout {
 		width: 100%;
-		max-width: 900px; /* Adjust layout maximum width for screens up to 1200px */
+		max-width: 900px;
 	}
 }
 
+/* large screens */
 @media screen and (max-width: 992px) {
 	.layout {
-		max-width: 728px; /* Adjust layout maximum width for screens up to 992px */
+		max-width: 728px;
 	}
 }
 
+/* medium screens */
 @media screen and (max-width: 768px) {
 	.layout {
-		max-width: 540px; /* Adjust layout maximum width for screens up to 768px */
+		max-width: 540px;
+	}
+
+	.title {
+		font-size: 2.5em;
+	}
+
+	.description {
+		font-size: 20px;
 	}
 }
 
+/* small screens */
 @media screen and (max-width: 576px) {
 	.layout {
-		max-width: 100%; /* Adjust layout maximum width for screens up to 576px */
-		padding: 1em;
+		width: 100%;
+		padding-inline: 1em;
+	}
+	.background {
+		background-attachment: local;
+	}
+	.input-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.input-grid {
+		display: flex;
+		flex-direction: column;
 	}
 }
