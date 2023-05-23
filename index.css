@@ -69,6 +69,7 @@ input:focus {
 	width: 100%;
 	height: 56px;
 	font-size: 1em;
+	font-weight: bold;
 	padding: 1em;
 	border-radius: 1em;
 	cursor: pointer;
